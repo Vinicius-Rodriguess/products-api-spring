@@ -1,10 +1,23 @@
 package io.github.productsapi.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import org.springframework.context.annotation.Primary;
+
+@Entity
+@Table(name = "tb_product")
 public class Product {
 
+    @Id
+    @Column(name = "id")
     private String id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "description")
     private String description;
+    @Column(name = "price")
     private Double price;
 
     public String getName() {
