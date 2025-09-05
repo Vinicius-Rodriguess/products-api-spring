@@ -2,11 +2,19 @@ package io.github.cursodsousa.arquiteturaspring.montadora.configuration;
 
 import io.github.cursodsousa.arquiteturaspring.montadora.Motor;
 import io.github.cursodsousa.arquiteturaspring.montadora.TipoMotor;
+import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
+import org.springframework.web.context.WebApplicationContext;
 
 @Configuration
+@Scope(BeanDefinition.SCOPE_SINGLETON)
+//@Scope(WebApplicationContext.SCOPE_APPLICATION)
+//@Scope("request")
+//@Scope("session")
+//@Scope("application")
 public class MontadoraConfiguration {
 
     @Bean(name = "motorAspirado")
